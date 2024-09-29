@@ -1,18 +1,18 @@
 import './App.css';
 import { Link } from 'react-router-dom';
 
-function App() {
+function Route() {
   return (
     <>
       <div>page contents</div>
       <div>
-        <Link to="about">About</Link>
+        <Link to="ant">Ant</Link>
       </div>
       <div>
-        <Link to="recruit">Recquit</Link>
+        <Link to="login">Login</Link>
       </div>
     </>
   );
 }
 
-export default App;
+export default Route;

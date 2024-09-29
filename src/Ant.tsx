@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { DatePicker, message, Alert } from 'antd';
+import { DatePicker, message, Alert, Button } from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
 import { Moment } from 'moment';
 
-function About() {
+function Ant() {
   const [date, setDate] = useState<Moment | null>();
 
   const handleChange = (value: Moment | null) => {
@@ -26,10 +26,12 @@ function About() {
         />
       </div>
       <div>
-        <Link to="/">go back to the top</Link>
+        <Link to="/">
+          <Button>go back to the top</Button>
+        </Link>
       </div>
     </div>
   );
 }
 
-export default About;
+export default Ant;

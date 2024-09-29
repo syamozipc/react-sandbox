@@ -2,22 +2,22 @@ import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.tsx';
-import About from './About.tsx';
-import Recruit from './Recruit.tsx';
+import Root from './Root.tsx';
+import Ant from './Ant.tsx';
+import Login from './Login.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Root />,
   },
   {
-    path: 'about',
-    element: <About />,
+    path: 'ant',
+    element: <Ant />,
   },
   {
-    path: 'recruit',
-    element: <Recruit />,
+    path: 'login',
+    element: <Login />,
   },
 ]);
 
