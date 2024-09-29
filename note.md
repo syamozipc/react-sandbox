@@ -7,6 +7,20 @@
 - フェッチ：axios、React query
 - 状態管理：react-redux
 
+### やること
+
+- [x] react router を実装
+- [x] ant design を実装
+- [x] ant design チュートリアルを流す
+- [ ] ant design の form（FormItem, useForm）、validation を実装
+- [ ] axios を実装
+- [ ] React Query を実装
+- [ ] React Redux を実装
+- [ ] react router チュートリアルを流す
+- [x] CSS in JS と CSS Modules を試す
+- [ ] React 実践入門を読み直し
+- [ ] React 公式を読む
+
 ## React Router
 
 できること
@@ -29,3 +43,13 @@
 - エラーハンドリング機能もある（errorElement props にコンポーネント渡す）
   - 全コンポーネントに設置しなくても m、直近の先祖コンポーネントにある errorElement を取得してくれる
 - scroll 位置もリカバーできる
+
+## Ant Design
+
+できること
+
+- MUI とほぼ同じ
+  - コンポーネントに色や UI をカスタマイズする props を渡せる
+  - 基調デザインは決まっているので、ありがちな UI になる
+- Form 要素は手厚い
+  - React Hook Form に近いことが出来るので、form library は不要かも
