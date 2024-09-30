@@ -17,6 +17,7 @@
 - [ ] React Query を実装
 - [ ] React Redux を実装
 - [ ] react router チュートリアルを流す
+- [ ] axios と React Query で mutation したい
 - [x] CSS in JS と CSS Modules を試す
 - [ ] React 実践入門を読み直し
 - [ ] React 公式を読む

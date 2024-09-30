@@ -2,10 +2,12 @@ import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Root from './Root.tsx';
-import Ant from './Ant.tsx';
-import Login from './Login.tsx';
-import Axios from './Axios.tsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Root from './Root';
+import Ant from './Ant';
+import Login from './Login';
+import Axios from './Axios';
+import Tanstack from './Tanstack';
 
 export const routes = [
   {
@@ -28,12 +30,20 @@ export const routes = [
     element: <Axios />,
     name: 'Axios',
   },
+  {
+    path: 'tanstack',
+    element: <Tanstack />,
+    name: 'Tanstack',
+  },
 ];
 
 const router = createBrowserRouter(routes);
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>
 );
