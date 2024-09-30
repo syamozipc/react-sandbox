@@ -10,14 +10,15 @@
 ### やること
 
 - [x] react router を実装
-- [x] ant design を実装
-- [x] ant design チュートリアルを流す
+- [x] ant design チュートリアル → 実装
 - [x] ant design の form（FormItem, useForm）、validation を実装
 - [x] axios を実装
-- [ ] React Query を実装
-- [ ] React Redux を実装
-- [ ] react router チュートリアルを流す
+- [x] React Query を実装
+- [ ] Redux チュートリアル
+- [ ] React Redux チュートリアル(React 用) → 実装
+- [ ] react router チュートリアル
 - [ ] axios と React Query で mutation したい
+- [ ] Web history API を触る
 - [x] CSS in JS と CSS Modules を試す
 - [ ] React 実践入門を読み直し
 - [ ] React 公式を読む
@@ -54,3 +55,15 @@
   - 基調デザインは決まっているので、ありがちな UI になる
 - Form 要素は手厚い
   - React Hook Form に近いことが出来るので、form library は不要かも
+
+## Tanstack Query
+
+できること
+
+- server state の状態管理
+  - どうデータを取得するかは関心がないため、axios でも fetch でも promise さえ返せば OK
+- steal 状態の query はバックグラウンドで refetch され、レンダリングされる
+- fresh である限りは refetch せずキャッシュを使う
+- inactive 状態の query はデフォルトでは 5 分で garbage collection される
+  - rendaring 外になると inactive になるっぽい
+- devtool を使うと各 query の状況が見られる（デフォルトでは`process.env.NODE_ENV === 'development'`でのみ動作するので prod では表示されない）

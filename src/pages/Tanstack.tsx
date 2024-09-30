@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 type Geo = {
   lat: string;
@@ -33,12 +35,12 @@ type User = {
 
 function Tanstack() {
   const query = useQuery({
+    staleTime: 5 * 1000,
     queryKey: ['users'],
     queryFn: async () => {
       const res = await axios.get<User[]>(
         'https://jsonplaceholder.typicode.com/users'
       );
-
       return res.data;
     },
   });
@@ -54,6 +56,11 @@ function Tanstack() {
           ))}
         </ul>
       )}
+      <div>
+        <Link to="/">
+          <Button>go back to the top</Button>
+        </Link>
+      </div>
     </>
   );
 }

@@ -1,15 +1,15 @@
 import './App.css';
 import { Link } from 'react-router-dom';
-import { routes } from './main';
+import { routes } from './routes';
 
-function Route() {
+function Layout() {
   return (
     <>
       <div>page contents</div>
       <ul>
         {routes.map((route) => (
-          <li key={route.name}>
-            <Link to={route.path}>{route.name}</Link>
+          <li key={route.id}>
+            <Link to={route.path ?? ''}>{route.id}</Link>
           </li>
         ))}
       </ul>
@@ -17,4 +17,4 @@ function Route() {
   );
 }
 
-export default Route;
+export default Layout;

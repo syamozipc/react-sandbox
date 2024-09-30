@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 type Post = {
   userId: number;
@@ -9,7 +9,7 @@ type Post = {
 };
 
 function Axios() {
-  const [posts, setPosts] = React.useState<Post[]>([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
