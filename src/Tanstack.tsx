@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 type Geo = {
   lat: string;
@@ -34,11 +35,11 @@ function Tanstack() {
   const query = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users');
+      const res = await axios.get<User[]>(
+        'https://jsonplaceholder.typicode.com/users'
+      );
 
-      const data = (await res.json()) as User[];
-
-      return data;
+      return res.data;
     },
   });
 
