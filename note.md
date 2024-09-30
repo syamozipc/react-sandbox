@@ -13,7 +13,7 @@
 - [x] ant design を実装
 - [x] ant design チュートリアルを流す
 - [x] ant design の form（FormItem, useForm）、validation を実装
-- [ ] axios を実装
+- [x] axios を実装
 - [ ] React Query を実装
 - [ ] React Redux を実装
 - [ ] react router チュートリアルを流す

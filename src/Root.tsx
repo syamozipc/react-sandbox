@@ -1,16 +1,18 @@
 import './App.css';
 import { Link } from 'react-router-dom';
+import { routes } from './main';
 
 function Route() {
   return (
     <>
       <div>page contents</div>
-      <div>
-        <Link to="ant">Ant</Link>
-      </div>
-      <div>
-        <Link to="login">Login</Link>
-      </div>
+      <ul>
+        {routes.map((route) => (
+          <li key={route.name}>
+            <Link to={route.path}>{route.name}</Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
