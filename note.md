@@ -1,29 +1,26 @@
-## アプリ作成
+## やること
 
-- ルーター：react-router
-- UI：ant design v4.24、styled component
-- フォーム：ant design の FormItem, useForm
-- バリデーション：ant design
-- フェッチ：axios、React query
-- 状態管理：react-redux
-
-### やること
-
-- [x] react router を実装
+- [x] React Router を実装
 - [x] ant design チュートリアル → 実装
 - [x] ant design の form（FormItem, useForm）、validation を実装
 - [x] axios を実装
 - [x] React Query を実装
 - [ ] Redux チュートリアル
 - [ ] React Redux チュートリアル(React 用) → 実装
-- [ ] react router チュートリアル
-- [ ] axios と React Query で mutation したい
+- [ ] React Router チュートリアル
+- [ ] axios と Tanstack Query で mutation したい
+- [ ] Mock Service Worker 導入
+- [ ] StoryBook 導入
+- [ ] React Testing Library 導入
+- [ ] Playwright 導入
 - [ ] Web history API を触る
 - [x] CSS in JS と CSS Modules を試す
 - [ ] React 実践入門を読み直し
 - [ ] React 公式を読む
 
-## React Router
+## パッケージメモ
+
+### React Router
 
 できること
 
@@ -46,7 +43,7 @@
   - 全コンポーネントに設置しなくても m、直近の先祖コンポーネントにある errorElement を取得してくれる
 - scroll 位置もリカバーできる
 
-## Ant Design
+### Ant Design
 
 できること
 
@@ -56,7 +53,7 @@
 - Form 要素は手厚い
   - React Hook Form に近いことが出来るので、form library は不要かも
 
-## Tanstack Query
+### Tanstack Query
 
 できること
 
@@ -67,3 +64,5 @@
 - inactive 状態の query はデフォルトでは 5 分で garbage collection される
   - rendaring 外になると inactive になるっぽい
 - devtool を使うと各 query の状況が見られる（デフォルトでは`process.env.NODE_ENV === 'development'`でのみ動作するので prod では表示されない）
+
+### React Redux
